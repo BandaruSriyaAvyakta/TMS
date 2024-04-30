@@ -8,8 +8,12 @@
     ],
     "routes": [
         {
+            "src": "/api/(.*)", // Assuming you have API routes
+            "dest": "/$1" // Forward API requests to the appropriate handler
+        },
+        {
             "src": "/(.*)",
-            "dest": "/"
+            "dest": "/index.js" // Assuming your main entry file is index.js
         }
     ]
-}  
+}
